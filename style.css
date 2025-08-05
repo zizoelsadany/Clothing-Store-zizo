@@ -522,7 +522,18 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     padding: 20px 12px;
   }
-
+.network-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+background-color: #fff3cd;
+  color: rgb(19, 2, 2);
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
   .product-item {
     width: 100%;
     height: auto;
@@ -700,7 +711,20 @@ nav {
 
   .card h3 {
     font-size: 18px;
+
   }
+  .network-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+background-color: #fff3cd;
+  color: rgb(19, 2, 2);
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
 }
 
 /* Reset styles */
