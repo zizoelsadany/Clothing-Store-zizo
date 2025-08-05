@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+  <div class="nav-container">
+    <a class="logo" href="#">Clothing <span>Store</span></a>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+    <!-- سكشن بنمط تكنولوجي -->
+    <div class="network-bg">
+    <canvas id="networkCanvas"></canvas>
+  </div>
+
+  <!-- Main Content -->
+  <section id="home" class="home">
+    <h1>Hello There!</h1>
+  </section>
+
+  
+
+    <div class="slider-container">
+  <div class="slider">
+    <img src="imge/1.png" class="active" alt="صورة 1">
+        <img src="imge/2.png" alt="صورة 2">
+            <img src="imge/3.png"  alt="صورة 3">
+    <img src="imge/4.png"  alt="صورة 4">
+    <img src="imge/5.png"  alt="صورة 5">
+    <img src="imge/6.png"  alt="صورة 6">
+    <img src="imge/7.png"  alt="صورة 7">
+    <img src="imge/8.png"  alt="صورة 8">
+    <img src="imge/9.png"  alt="صورة 9">
+    <img src="imge/10.png"  alt="صورة10">
+    <img src="imge/12.png"  alt="صورة 11">
+    <img src="imge/3.png"  alt="صورة 12">
+    </div>
+</div>
+    
+<div class="content">
+     <h1>🛍️Clothing <span>Store</span></h1>
+  <p>!Discover the latest trends in fashion at unbeatable prices</p>
+  <p>.From casual wear to stylish outfits, we’ve got something for everyone</p>
+  <p>.Shop now and upgrade your wardrobe with ease</p>
+    <a href="#products" class="login-btn" style="margin-top: 1.5rem;">view product</a>
+    <!-- أيقونة السلة -->
+<a href="cart.html" id="cart-icon" style="position:fixed;top:80px;left:30px;z-index:999;display:flex;align-items:center;text-decoration:none;">
+  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/cart-fill.svg" alt="سلة" style="width:32px;height:32px;">
+  <span id="cart-count" style="background:#f8b500;color:#fff;font-weight:bold;border-radius:50%;padding:2px 10px;margin-right:6px;font-size:1rem;">0</span>
+</a>
+</div>
+<div style="position: absolute; top: 100px; right: 20px;">
+  <a href="dashboard.html" title="الملف الشخصي">
+    <i class="fas fa-user-circle" style="font-size: 40px; color: #333;"></i>
+  </a>
+</div>
+<a href="dashboard.php" title="لوحة التحكم" style="position: fixed; top: 20px; right: 20px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Dashboard" style="width: 40px; height: 40px;">
+</a>
+</section>
+<section id="products">
+    <h2>products</h2>
+    <div class="product-grid">
+
+    <div class="product-item">
+        <img src="imge/1.png" alt="منتج 1">
+        <h3>طقم صيفي رمادي</h3>
+        <p>تيشيرت وشورت واكسسوارات</p>
+        <span class="price"> 18000ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/2.png" alt="منتج 2">
+        <h3>قميص أسود</h3>
+        <p>قميص خفيف أنيق</p>
+        <span class="price">10000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/3.png" alt="منتج 3">
+        <h3>طقم بني</h3>
+        <p>طقم كامل</p>
+        <span class="price">18000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/4.png" alt="منتج 4">
+        <h3>حذاء</h3>
+        <p>حذاء رياضي مريح</p>
+        <span class="price">22000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/5.png" alt="قميص صيفي مخطط">
+        <h3>قميص صيفي مخطط</h3>
+        <p>خفيف وأنيق للحر</p>
+        <span class="price">17000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/6.png" alt="تيشيرت الأرجنتين">
+        <h3>تيشيرت الأرجنتين</h3>
+        <p>قميص مشجعين رسمي</p>
+        <span class="price">21000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/7.png" alt="تيشيرت الأهلي حارس">
+        <h3>تيشيرت الأهلي التاني</h3>
+        <p>قميص رياضي أسود</p>
+        <span class="price">16000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/8.png" alt="تيشيرت الأهلي أحمر">
+        <h3>تيشيرت الأهلي أحمر</h3>
+        <p>قميص النادي الرسمي</p>
+        <span class="price">23000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/9.png" alt="تيشيرت برشلونة">
+        <h3>تيشيرت برشلونة</h3>
+        <p>قميص النادي الرسمي</p>
+        <span class="price">20000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/10.png" alt="تيشيرت رمادي رجالي">
+        <h3>تيشيرت رمادي رجالي</h3>
+        <p>قطن مريح بطبعة</p>
+        <span class="price">50000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/11.png" alt="طقم NASA صيفي">
+        <h3>طقم NASA صيفي</h3>
+        <p>تيشيرت وشورت خفيف</p>
+        <span class="price">30000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="imge/12.png" alt="قميص أبيض صيفي">
+        <h3>قميص أبيض صيفي</h3>
+        <p>قميص شبك بأكمام قصيرة</p>
+        <span class="price">30000 ج.م</span>
+        <div class="product-actions">
+            <button>شراء</button>
+            <button class="add-cart">أضف للسلة</button>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<section class="footer" id="contact">
+  <!-- روابط التواصل -->
+  <div class="footer-section">
+    <h4>تابعنا على</h4>
+    <div class="social-icons">
+      <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="فيسبوك" />
+      <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="انستجرام" />
+      <img src="https://img.icons8.com/ios-filled/50/twitter.png" alt="تويتر" />
+      <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="يوتيوب" />
+      <img src="https://img.icons8.com/ios-filled/50/pinterest.png" alt="بينترست" />
+      <img src="https://img.icons8.com/ios-filled/50/tiktok.png" alt="تيك توك" />
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <h4>اشترك معنا لتصلكِ أخبار الموضة</h4>
+    <div class="subscribe-input">
+      <input type="email" placeholder="ادخلي بريدك الإلكتروني" />
+      <button>الإشتراك</button>
+    </div>
+    <div class="subscribe-input">
+      <input type="tel" placeholder="رقم الهاتف للرسائل النصية" />
+      <button>اشترك</button>
+    </div>
+  </div>
+    <div class="footer-section">
+     <h4>معلومات الشركة</h4>
+      <ul>
+        <li>حول Clothing Store</li>
+        <li>اتصل بنا</li>
+        <li>انضم إلينا</li>
+        <li>الوظائف</li>
+      </ul>
+    </div>
+  <div class="footer-section">
+    <h4>مركز المساعدة</h4>
+      <ul>
+        <li>كيفية الطلب</li>
+        <li>معلومات الشحن</li>
+        <li>الأسئلة الشائعة</li>
+        <li>Clothing Store VIP</li>
+      </ul>
+  </div>
+  <div class="footer-section">
+    <h4>سياسات المتجر</h4>
+      <ul>
+        <li>سياسة الإرجاع</li>
+        <li>سياسة الخصوصية</li>
+        <li>شروط الاستخدام</li>
+        <li>مركز الخصوصية</li>
+      </ul>
+  <div class="footer-section">
+    <h4>طرق الدفع</h4>
+    <div class="payments">
+      <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
+      <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="MasterCard" />
+      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" />
+      <img src="https://img.icons8.com/color/48/apple-pay.png" alt="Apple Pay" />
+    </div>
+  </div>
+</section>
+
+<div class="footer-bottom">
+  جميع الحقوق محفوظة  © Clothing Store –2025 zizo| الشروط والأحكام | سياسة الخصوصية | مركز الخصوصية
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
