@@ -603,6 +603,30 @@ background-color: #fff3cd;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media (max-width: 528px) {
+  .navbar nav {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    order: 1;
+    margin-right: 0; /* اتركه ليبقى على اليمين */
+  }
+
+  .menu-toggle {
+    order: 2;
+    margin-left: 0;
+  }
+
+  .nav-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .menu-toggle {
