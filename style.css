@@ -86,7 +86,45 @@ nav {
 .login-btn:hover {
   background-color: #d99a00;
 }
+.network-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+background-color: #fff3cd;
+  color: rgb(19, 2, 2);
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
 
+#networkCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 48px;
+  animation: fadeIn 2s ease-in-out;
+}
+.slider img {
+  display: none;
+  width: 100%;
+}
+
+.slider img.active {
+  display: block;
+}
 .slider-container {
   width: 40%;
   float: right;
@@ -522,18 +560,20 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     padding: 20px 12px;
   }
-.network-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-background-color: #fff3cd;
-  color: rgb(19, 2, 2);
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
+
+  .network-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff3cd;
+    color: rgb(19, 2, 2);
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+
   .product-item {
     width: 100%;
     height: auto;
@@ -603,21 +643,12 @@ background-color: #fff3cd;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 528px) {
   .navbar nav {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .navbar .logo {
-    order: 1;
-    margin-right: 0; /* اتركه ليبقى على اليمين */
-  }
-
-  .menu-toggle {
-    order: 2;
-    margin-left: 0;
   }
 
   .nav-container {
@@ -629,9 +660,6 @@ background-color: #fff3cd;
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
   .nav-links li a {
     color: rgb(233, 225, 225);
     text-decoration: none;
@@ -640,7 +668,7 @@ background-color: #fff3cd;
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 50px; /* خلي القائمة تبدأ تحت الهيدر المصغر */
     right: 20px;
     background-color: #444;
     flex-direction: column;
@@ -658,20 +686,26 @@ background-color: #fff3cd;
 
   nav {
     padding: 5px 10px;
+    height: 50px; /* تصغير ارتفاع الهيدر */
   }
 
   .nav-container {
-    height: 50px;
-    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    order: 1;
   }
 
   .logo {
+    order: 2;
     font-size: 1.2rem;
-  }
-
-  .nav-links {
-    top: 40px;
   }
 
   .dashboard {
@@ -715,10 +749,7 @@ background-color: #fff3cd;
     height: 35px;
   }
 
-  .logo2 {
-    font-size: 20px;
-  }
-
+  .logo2,
   .sidebar .logo {
     font-size: 20px;
   }
@@ -735,69 +766,20 @@ background-color: #fff3cd;
 
   .card h3 {
     font-size: 18px;
-
   }
+
   .network-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-background-color: #fff3cd;
-  color: rgb(19, 2, 2);
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
-}
-
-/* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
-.network-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-background-color: #fff3cd;
-  color: rgb(19, 2, 2);
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
-
-#networkCanvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.home {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.home h1 {
-  font-size: 48px;
-  animation: fadeIn 2s ease-in-out;
-}
-.slider img {
-  display: none;
-  width: 100%;
-}
-
-.slider img.active {
-  display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff3cd;
+    color: rgb(19, 2, 2);
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
 }
 
 @keyframes fadeIn {
