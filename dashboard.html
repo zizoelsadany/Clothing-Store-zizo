@@ -1,56 +1,56 @@
-
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>لوحة تحكم العميل</title>
+  <title>Customer Dashboard</title>
   <link rel="stylesheet" href="style.css" />
-        <form action="server/dashboard.php" method="post">
-
+  <form action="server/dashboard.php" method="post"></form>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <nav>
-  <div class="nav-container">
-    <a class="logo" href="#">Clothing <span>Store</span></a>
-</nav>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="#">Clothing <span>Store</span></a>
+    </div>
+  </nav>
+
   <div class="dashboard">
     <aside class="sidebar">
-      <div class="logo2">🧥  Clothing Store</div>
+      <div class="logo2">🧥 Clothing Store</div>
       <ul>
-        <li><a href="#"><i class="fas fa-user"></i> حسابي</a></li>
-        <li><a href="index.html"><i class="fas fa-box"></i> طلباتي</a></li>
-        <li><a href="#"><i class="fas fa-heart"></i> المفضلة</a></li>
-        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> السلة</a></li>
-        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> My Account</a></li>
+        <li><a href="index.html"><i class="fas fa-box"></i> My Orders</a></li>
+        <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
       </ul>
     </aside>
 
     <main class="content">
-   <h1>مرحبًا بك 👋</h1>
-    <p>welcome to Clothing Store </p>
-    <p>يمكنك إدارة طلباتك ومفضلاتك وسلة التسوق الخاصة
-    <div class="stats">
-      <div class="card">
-        <h3>عدد الطلبات</h3>
-        <p id="order-count">0</p>
-      </div>
-      <div class="card">
-        <h3>مفضلاتك</h3>
-        <p id="fav-count">0 منتجات</p>
-      </div>
-        <div class="content">
-    <h1>Shopping cart</h1>
-    <div class="product-grid" id="cart-grid"></div>
-<div id="cart-grid"></div>
+      <h1>Welcome 👋</h1>
+      <p>Welcome to Clothing Store</p>
+      <p>You can manage your orders, favorites, and shopping cart here.</p>
 
-<div id="total" style="margin-top: 20px; font-size: 18px; font-weight: bold; color: #333;"></div>
-  </div>
- <script src="cart.js"></script>
-  </div>
+      <div class="stats">
+        <div class="card">
+          <h3>Total Orders</h3>
+          <p id="order-count">0</p>
+        </div>
+        <div class="card">
+          <h3>Your Favorites</h3>
+          <p id="fav-count">0 items</p>
+        </div>
+      </div>
 
+      <div class="content">
+        <h1>Shopping Cart</h1>
+        <div class="product-grid" id="cart-grid"></div>
+        <div id="cart-grid"></div>
+        <div id="total" style="margin-top: 20px; font-size: 18px; font-weight: bold; color: #333;"></div>
+      </div>
+
+      <script src="cart.js"></script>
     </main>
   </div>
 </body>
