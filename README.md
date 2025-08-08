@@ -23,4 +23,3 @@ It showcases products, descriptions, and prices with interactive buttons — ide
 
 ---
 
-## 📂 Project Structure
