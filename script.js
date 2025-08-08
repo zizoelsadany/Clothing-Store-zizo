@@ -81,15 +81,13 @@ function showPopup(msg) {
   document.body.appendChild(popup);
   setTimeout(() => popup.remove(), 1500);
 }
+const exchangeRate = 50; // 1 USD = 50 EGP (غيره حسب السعر الحالي)
 
-document.querySelectorAll('.price').forEach(span => {
-  let priceText = span.innerText.trim();
-  if (priceText.endsWith('ج.م')) {
-    let egp = parseFloat(priceText.replace('ج.م', '').trim());
-    let usd = (egp / 50).toFixed(2); 
-    span.innerText = `${usd} $`;
-  }
-});
+  document.querySelectorAll('.price').forEach(priceElement => {
+    const egpValue = parseFloat(priceElement.textContent.replace(/[^\d.]/g, ''));
+    const usdValue = (egpValue / exchangeRate).toFixed(2);
+    priceElement.textContent = `$${usdValue}`;
+  });
  const toggle = document.getElementById('menu-toggle');
   const links = document.getElementById('nav-links');
 
