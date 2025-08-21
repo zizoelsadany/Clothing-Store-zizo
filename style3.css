@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* مهم عشان مايلزقش في الأطراف على الموبايل */
+}
+
+.checkout-container {
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* --- النصوص والعناوين --- */
+.form-section h2, 
+.summary-section h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-methods label:hover {
+  background: #ddd;
+}
+
+/* --- ملخص الطلب --- */
+.summary-section {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* --- الأزرار --- */
+.checkout-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(45deg, #f94d6a, #ff6b6b);
+}
+
+/* --- الرسائل --- */
+.message-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+}
+
+.message-box.success {
+  background: #e8f5e9;
+  border-color: #4CAF50;
+  color: #2e7d32;
+}
+
+.message-box.error {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #b71c1c;
+}
+
+/* --- الريسبونسف --- */
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr; /* عمود واحد */
+    padding: 15px;
+  }
+
+  .form-section h2, 
+  .summary-section h2 {
+    font-size: 18px;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .summary-item, 
+  .summary-total {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .checkout-container {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .checkout-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
